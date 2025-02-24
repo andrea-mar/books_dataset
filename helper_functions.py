@@ -112,7 +112,7 @@ def missing_values_summary(df: pd.DataFrame) -> pd.DataFrame:
     })
 
     # Filter only columns with missing data and sort by the most missing
-    missing_summary = missing_summary[missing_summary['Percentage'] > 70]
+    missing_summary = missing_summary[missing_summary['Percentage'] > 0]
     missing_summary = missing_summary.sort_values(by='Percentage', ascending=False)
 
     return missing_summary
